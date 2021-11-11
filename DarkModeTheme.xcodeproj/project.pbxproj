@@ -15,6 +15,7 @@
 		5AD7DE82273834D3004CA8AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7DE80273834D3004CA8AC /* LaunchScreen.storyboard */; };
 		5AD7DE8B27383E40004CA8AC /* RxTheme in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD7DE8A27383E40004CA8AC /* RxTheme */; };
 		5AD7DE8E27383ED3004CA8AC /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD7DE8D27383ED3004CA8AC /* TinyConstraints */; };
+		5AD7DE9027383F6F004CA8AC /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7DE8F27383F6F004CA8AC /* ThemeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5AD7DE7E273834D3004CA8AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AD7DE81273834D3004CA8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AD7DE83273834D3004CA8AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD7DE8F27383F6F004CA8AC /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				5AD7DE7E273834D3004CA8AC /* Assets.xcassets */,
 				5AD7DE80273834D3004CA8AC /* LaunchScreen.storyboard */,
 				5AD7DE83273834D3004CA8AC /* Info.plist */,
+				5AD7DE8F27383F6F004CA8AC /* ThemeService.swift */,
 			);
 			path = DarkModeTheme;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD7DE7A273834D2004CA8AC /* ViewController.swift in Sources */,
+				5AD7DE9027383F6F004CA8AC /* ThemeService.swift in Sources */,
 				5AD7DE76273834D2004CA8AC /* AppDelegate.swift in Sources */,
 				5AD7DE78273834D2004CA8AC /* SceneDelegate.swift in Sources */,
 			);
