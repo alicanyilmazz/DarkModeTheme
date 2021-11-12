@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btnChange: UIButton!
     
+    @IBOutlet weak var introLabel: UILabel!
+    
+    
     private let floatingButton : UIButton = {
        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         button.backgroundColor = .systemPink
@@ -58,6 +61,7 @@ class ViewController: UIViewController {
         btnChange.theme.backgroundColor =  themed { $0.btnColor }
         floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         themeButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        introLabel.text = "viewController.label.introMessage".localized()
     }
     
     @objc private func didTapButton(){
@@ -91,6 +95,5 @@ class ViewController: UIViewController {
 
     }
 }
-
 
 

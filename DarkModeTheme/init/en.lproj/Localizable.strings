@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  DarkModeTheme
+
+  Created by alican on 12.11.2021.
+  
+*/
+
+"viewController.label.introMessage" = "Welcome";
