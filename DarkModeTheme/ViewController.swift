@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnChange: UIButton!
     
     @IBOutlet weak var introLabel: UILabel!
+    
+    @IBOutlet weak var animationView: AnimationView!
     
     
     private let floatingButton : UIButton = {
@@ -62,6 +65,10 @@ class ViewController: UIViewController {
         floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         themeButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         introLabel.text = "viewController.label.introMessage".localized()
+        //setupAnimation()
+        animationView.backgroundColor = .clear
+        animationView.loopMode = .loop
+        animationView.play()
     }
     
     @objc private func didTapButton(){
@@ -84,15 +91,19 @@ class ViewController: UIViewController {
 
     @objc func didChangeThemeSwitchValue(){
         if themeSwitch.isOn{
-            themeService.switch(.dark)
-        }else{
             themeService.switch(.light)
+        }else{
+            themeService.switch(.dark)
         }
     }
     
     func setupTheme(){
         view.theme.backgroundColor = themed { $0.backgroundColor }
 
+    }
+    
+    private func setupAnimation(){
+        
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A8078752743DE7400926A2A /* study.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8078742743DE7400926A2A /* study.json */; };
+		5A8078772743E0CB00926A2A /* study2.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8078762743E0CB00926A2A /* study2.json */; };
+		5A8D66282742C47A00311423 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8D66272742C47A00311423 /* Lottie */; };
 		5A8F2951273ECA430033BABE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A8F2953273ECA430033BABE /* Localizable.strings */; };
 		5A8F2956273EE7C10033BABE /* StringExtensionss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F2955273EE7C10033BABE /* StringExtensionss.swift */; };
 		5AD7DE76273834D2004CA8AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7DE75273834D2004CA8AC /* AppDelegate.swift */; };
@@ -21,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A8078742743DE7400926A2A /* study.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = study.json; sourceTree = "<group>"; };
+		5A8078762743E0CB00926A2A /* study2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = study2.json; sourceTree = "<group>"; };
 		5A8F2952273ECA430033BABE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A8F2954273ECA7E0033BABE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A8F2955273EE7C10033BABE /* StringExtensionss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionss.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 			files = (
 				5AD7DE8B27383E40004CA8AC /* RxTheme in Frameworks */,
 				5AD7DE8E27383ED3004CA8AC /* TinyConstraints in Frameworks */,
+				5A8D66282742C47A00311423 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +81,8 @@
 		5AD7DE74273834D2004CA8AC /* DarkModeTheme */ = {
 			isa = PBXGroup;
 			children = (
-				5A8F2957273EE9170033BABE /* init */,
+				5A8078762743E0CB00926A2A /* study2.json */,
+				5A8078742743DE7400926A2A /* study.json */,
 				5AD7DE75273834D2004CA8AC /* AppDelegate.swift */,
 				5AD7DE77273834D2004CA8AC /* SceneDelegate.swift */,
 				5AD7DE79273834D2004CA8AC /* ViewController.swift */,
@@ -85,6 +92,7 @@
 				5AD7DE83273834D3004CA8AC /* Info.plist */,
 				5AD7DE8F27383F6F004CA8AC /* ThemeService.swift */,
 				5A8F2955273EE7C10033BABE /* StringExtensionss.swift */,
+				5A8F2957273EE9170033BABE /* init */,
 			);
 			path = DarkModeTheme;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			packageProductDependencies = (
 				5AD7DE8A27383E40004CA8AC /* RxTheme */,
 				5AD7DE8D27383ED3004CA8AC /* TinyConstraints */,
+				5A8D66272742C47A00311423 /* Lottie */,
 			);
 			productName = DarkModeTheme;
 			productReference = 5AD7DE72273834D2004CA8AC /* DarkModeTheme.app */;
@@ -141,6 +150,7 @@
 			packageReferences = (
 				5AD7DE8927383E40004CA8AC /* XCRemoteSwiftPackageReference "RxTheme" */,
 				5AD7DE8C27383ED3004CA8AC /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				5A8D66262742C47A00311423 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 5AD7DE73273834D2004CA8AC /* Products */;
 			projectDirPath = "";
@@ -156,9 +166,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8078772743E0CB00926A2A /* study2.json in Resources */,
 				5AD7DE82273834D3004CA8AC /* LaunchScreen.storyboard in Resources */,
 				5A8F2951273ECA430033BABE /* Localizable.strings in Resources */,
 				5AD7DE7F273834D3004CA8AC /* Assets.xcassets in Resources */,
+				5A8078752743DE7400926A2A /* study.json in Resources */,
 				5AD7DE7D273834D2004CA8AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +417,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5A8D66262742C47A00311423 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		5AD7DE8927383E40004CA8AC /* XCRemoteSwiftPackageReference "RxTheme" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxTheme";
@@ -424,6 +444,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5A8D66272742C47A00311423 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A8D66262742C47A00311423 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		5AD7DE8A27383E40004CA8AC /* RxTheme */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5AD7DE8927383E40004CA8AC /* XCRemoteSwiftPackageReference "RxTheme" */;

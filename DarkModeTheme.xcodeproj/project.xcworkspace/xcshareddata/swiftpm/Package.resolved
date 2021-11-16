@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios.git",
+        "state": {
+          "branch": "master",
+          "revision": "e9c52fa3e2f962febb6fcc27a94eff15292130b2",
+          "version": null
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
