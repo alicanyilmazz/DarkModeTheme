@@ -101,10 +101,6 @@ class ViewController: UIViewController {
         view.theme.backgroundColor = themed { $0.backgroundColor }
 
     }
-    
-    private func setupAnimation(){
-        
-    }
 }
 
 
