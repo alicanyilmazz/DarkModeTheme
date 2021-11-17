@@ -65,7 +65,6 @@ class ViewController: UIViewController {
         floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         themeButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         introLabel.text = "viewController.label.introMessage".localized()
-        //setupAnimation()
         animationView.backgroundColor = .clear
         animationView.loopMode = .loop
         animationView.play()
@@ -99,7 +98,6 @@ class ViewController: UIViewController {
     
     func setupTheme(){
         view.theme.backgroundColor = themed { $0.backgroundColor }
-
     }
 }
 
