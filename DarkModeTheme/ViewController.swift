@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var introLabel: UILabel!
     
+    @IBOutlet weak var dataLabel: UILabel!
+    
     @IBOutlet weak var animationView: AnimationView!
     
     
@@ -68,6 +70,17 @@ class ViewController: UIViewController {
         animationView.backgroundColor = .clear
         animationView.loopMode = .loop
         animationView.play()
+        
+        // We will handle broadcast (comed from Notification Center)
+        NotificationCenter.default.addObserver(self, selector: #selector(makeSomething(notification:)), name: .notificationName, object: nil)
+    }
+    
+    @objc func makeSomething(notification : Notification){
+        let comedMessage = notification.userInfo?["message"]
+        let comedDate = notification.userInfo?["todaysDate"]
+        let comedData = notification.userInfo?["data"] as! Persons
+        
+        dataLabel.text = "\(comedData.personName!) \(comedData.personAge!)"
     }
     
     @objc private func didTapButton(){
@@ -99,6 +112,14 @@ class ViewController: UIViewController {
     func setupTheme(){
         view.theme.backgroundColor = themed { $0.backgroundColor }
     }
+    
+    
+    @IBAction func sendNotificationClicked(_ sender: UIButton) {
+        
+    }
 }
 
+extension Notification.Name{
+    static let notificationName = Notification.Name("notificationX")
+}
 
