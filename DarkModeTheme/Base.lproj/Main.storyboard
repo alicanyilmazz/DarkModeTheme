@@ -19,38 +19,51 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Ah-n3-28e">
                                 <rect key="frame" x="182.5" y="130" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uJ-Ie-cHJ">
-                                <rect key="frame" x="20" y="308" width="374" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uJ-Ie-cHJ">
+                                <rect key="frame" x="20" y="308" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbj-sl-dlM" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="445" width="414" height="356"/>
+                                <rect key="frame" x="0.0" y="465.5" width="414" height="356"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="356" id="LA5-In-Ily"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="study2"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="study"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEJ-WG-vU7">
                                 <rect key="frame" x="20" y="205" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go"/>
+                                <connections>
+                                    <action selector="sendNotificationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="al0-lI-cYw"/>
+                                    <segue destination="jmb-of-Hr0" kind="presentation" id="BL5-qc-hjU"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-CB-pO3">
+                                <rect key="frame" x="10" y="348.5" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1Ah-n3-28e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="D6n-5F-v0E"/>
                             <constraint firstItem="qbj-sl-dlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fv1-IU-fP4"/>
+                            <constraint firstItem="zxi-CB-pO3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="KJY-P0-QeD"/>
                             <constraint firstItem="rEJ-WG-vU7" firstAttribute="top" secondItem="1Ah-n3-28e" secondAttribute="bottom" constant="44" id="MnR-5R-r7s"/>
                             <constraint firstItem="1Ah-n3-28e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QzK-Fr-kcb"/>
                             <constraint firstItem="qbj-sl-dlM" firstAttribute="top" secondItem="4uJ-Ie-cHJ" secondAttribute="bottom" constant="137" id="V1v-0q-QRc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rEJ-WG-vU7" secondAttribute="trailing" constant="20" id="aJS-2E-tfw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zxi-CB-pO3" secondAttribute="trailing" constant="10" id="f2R-Ym-yIV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4uJ-Ie-cHJ" secondAttribute="trailing" constant="20" id="fha-VG-SHk"/>
+                            <constraint firstItem="zxi-CB-pO3" firstAttribute="top" secondItem="4uJ-Ie-cHJ" secondAttribute="bottom" constant="20" id="lvQ-5Q-8iK"/>
                             <constraint firstItem="qbj-sl-dlM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qIE-1L-cuK"/>
                             <constraint firstItem="4uJ-Ie-cHJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qZ0-Of-MmX"/>
                             <constraint firstItem="rEJ-WG-vU7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rqA-Hk-qrq"/>
@@ -60,13 +73,43 @@
                     <connections>
                         <outlet property="animationView" destination="qbj-sl-dlM" id="pFO-RE-uod"/>
                         <outlet property="btnChange" destination="rEJ-WG-vU7" id="vfp-xq-oRC"/>
+                        <outlet property="dataLabel" destination="zxi-CB-pO3" id="13Y-rF-4ak"/>
                         <outlet property="introLabel" destination="4uJ-Ie-cHJ" id="poZ-AX-JS9"/>
                         <outlet property="themeSwitch" destination="1Ah-n3-28e" id="Uwf-WM-4GO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+            <point key="canvasLocation" x="-533.33333333333337" y="99.776785714285708"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="oa4-z2-eak">
+            <objects>
+                <viewController id="jmb-of-Hr0" customClass="DetailViewController" customModule="DarkModeTheme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpu-rD-mwq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgj-9w-Z2Y">
+                                <rect key="frame" x="81" y="242" width="253" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2423534393" green="0.54009139539999995" blue="0.67486298079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send Notification"/>
+                                <connections>
+                                    <action selector="sendNotificationButtonClicked:" destination="jmb-of-Hr0" eventType="touchUpInside" id="mr0-oQ-Mkf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jwk-eT-EHA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FDy-Cj-pX6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0BY-RK-wBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331.8840579710145" y="99.776785714285708"/>
         </scene>
     </scenes>
     <resources>
